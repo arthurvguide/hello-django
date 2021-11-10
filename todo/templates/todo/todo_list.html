@@ -8,5 +8,19 @@
 </head>
 <body>
     <h1>Things I have to do: </h1>
+    <div>
+        {% for item in items%}
+        <div>
+            {% if item.done %}
+            <p><strike> {{ item.name }}</strike></p>
+            {% else %}
+                <p>{{ item.name }}</p>
+            {% endif %}
+        </div>
+        {% empty %}
+        <div>You have nothing to do</div>
+        {% endfor %}
+    </div>
+    <a href="/add">Add an Item</a>
 </body>
 </html>
