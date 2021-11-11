@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Add a Todo item </h1>
-    <form method="POST" action="{% url 'add' %}">
+    <h1>Edit a Todo item </h1>
+    <form method="POST">
         {% csrf_token %}
         {{ form }}
-        <p><button type="submit">Add an Item</button></p>
+        <p><button type="submit">Edit an Item</button></p>
     </form>
 </body>
 </html>
