@@ -17,6 +17,8 @@
                 <p>{{ item.name }}</p>
             {% endif %}
             <a href="/edit/{{ item.id }}"> <button>Edit</button></a>
+            <a href="/toggle/{{ item.id }}"> <button>Toggle</button></a>
+            <a href="/delete/{{ item.id }}"> <button>Delete</button></a>
         </div>
         {% empty %}
         <div>You have nothing to do</div>
